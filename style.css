@@ -37,7 +37,7 @@ img {
 body {
 
     background-color: #E9EDC9;
-    color: aqua;
+    color: #CCD5AE;
     margin: 80px;
 
     padding: auto;
@@ -92,6 +92,12 @@ h1 {
 
 }
 
+h3 {
+
+    color: #FEFAE0;
+
+}
+
 .content section {
 
     background-color: #FAEDCD;
@@ -103,5 +109,60 @@ h1 {
     align-items: center;
     align-content: stretch;
 
+
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #FAEDCD;
+    color: #92AC86;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 20%;
+
+
+}
+
+.tablink:hover {
+    background-color: #FEFAE0;
+    /* tabcontent.backgroundColor: #FEFAE0; */
+    /* .tabcontent.background-color: #FEFAE0; */
+    /* display: block; */
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Breads {
+    background-color: #FAEDCD;
+    border-color: black;
+    border-width: 250px;
+    border-radius: 40px;
+}
+
+#Dishes {
+    background-color: #FAEDCD;
+}
+
+#Desserts {
+    background-color: #FAEDCD;
+}
+
+#Sides {
+    background-color: #FAEDCD;
+}
+
+#Condiments {
+
+    background-color: #FAEDCD;
 
 }
