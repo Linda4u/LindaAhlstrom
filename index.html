@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="img" href="assets/icons8-rose-64.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -21,6 +22,7 @@
     <header>
         <h2>Pantry</h2>
         <a href="Pantry.html">mom on</a>
+
         <h2>Recipe</h2>
         <h2>Shopping List
 
@@ -29,30 +31,92 @@
         </h2>
     </header>
 
-    <img src="https://media.istockphoto.com/id/1550758299/photo/clean-black-induction-stove-with-control-panel-near-marble-countertop.jpg?s=2048x2048&w=is&k=20&c=B6S_uPXpLomSpUwwCxaiO3H_syI6yz34WVGZ4_xo0rk="
-        alt="cooking picture" width="800" class="center">
 
-    <img src="Linda Linkedin.jpg" alt="my face" height="50">
+    <!-- adding a notebook -->
+    <div class="notepad">
+        <div class="notepad-header">
+            <h2>Notepad</h2>
+        </div>
+        <div class="notepad-body" contenteditable="true" id="notepad-body">
+            <!-- This div will contain the editable content -->
 
-    <p>
+        </div>
+        <!-- adding a copy text button with a notepad -->
+        <p>
+            <button onclick="copyText()" class="copyTextButton">Copy text</button>
+        </p>
 
 
-    </p>
+        <script>
+            document.getElementById('notepad-body').addEventListener('paste', function (event) {
+                event.preventDefault();
+                var text = (event.originalEvent || event).clipboardData.getData('text/plain');
+                document.execCommand('insertText', false, text);
+            });
+        </script>
+
+        <script>
+            function copyText() {
+                // Get the notepad body element
+                var notepadBody = document.getElementById("notepad-body");
+
+                // Get the text content of the notepad body
+                var textToCopy = notepadBody.innerText;
+
+                // Create a textarea element to hold the text temporarily
+                var textarea = document.createElement("textarea");
+                textarea.value = textToCopy;
+                document.body.appendChild(textarea);
+
+                // Select the text in the textarea
+                textarea.select();
+                textarea.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the textarea to the clipboard
+                document.execCommand("copy");
+
+                // Remove the temporary textarea
+                document.body.removeChild(textarea);
+
+            }
+        </script>
+
+
+        <!-- end of adding a copy text button with a notepad-->
+
+        <img src="https://media.istockphoto.com/id/1550758299/photo/clean-black-induction-stove-with-control-panel-near-marble-countertop.jpg?s=2048x2048&w=is&k=20&c=B6S_uPXpLomSpUwwCxaiO3H_syI6yz34WVGZ4_xo0rk="
+            alt="cooking picture" width="800" class="center">
+
+        <img src="Linda Linkedin.jpg" alt="my face" height="50">
 
 
 
-    <!-- <button class="tablink" onclick="openPage('Breads', this, '#FAEDCD')" id="defaultOpen">Breads</button>
+        <p>
+
+
+        </p>
+
+
+
+        <!-- <button class="tablink" onclick="openPage('Breads', this, '#FAEDCD')" id="defaultOpen">Breads</button>
     <button class="tablink" onclick="openPage('Dishes', this, '#FAEDCD')">Main Dishes</button>
     <button class="tablink" onclick="openPage('Desserts', this, '#FAEDCD')">Desserts</button>
     <button class="tablink" onclick="openPage('Sides', this, '#FAEDCD')">Sides</button>
     <button class="tablink" onclick="openPage('Condiments', this, '#FAEDCD')">Condiments</button> -->
 
 
-    <button class="tablink" onclick="openPage('Breads', this, '#FAEDCD')">Breads</button>
-    <button class="tablink" onclick="openPage('Dishes', this, '#FAEDCD')">Main Dishes</button>
-    <button class="tablink" onclick="openPage('Desserts', this, '#FAEDCD')">Desserts</button>
-    <button class="tablink" onclick="openPage('Sides', this, '#FAEDCD')">Sides</button>
-    <button class="tablink" onclick="openPage('Condiments', this, '#FAEDCD')">Condiments</button>
+        <!-- <a href="Breads.html" class="tablink">Breads</a>
+    <a href="Dishes.html" class="tablink">Main Dishes</a>
+    <a href="recipes/red_salsa.html" class="tablink">Desserts</a>
+    <a href="Sides.html" class="tablink">Sides</a>
+    <a href="Condiments.html" class="tablink">Condiments</a> -->
+
+
+        <button class="tablink" id="Breads">Breads</button>
+        <button class="tablink" id="Main Dishes">Main Dishes</button>
+        <button class="tablink" id="Desserts">Desserts</button>
+        <button class="tablink" id="Sides">Sides</button>
+        <button class="tablink" id="Sides">Condiments</button>
 
 
 
@@ -61,30 +125,62 @@
 
 
 
-    <div id="Breads" class="tabcontent">
-        <!-- <h3>Home</h3>
-        <p>This is some content</p> -->
-    </div>
+        <!-- <div id="Breads" class="tabcontent">
+        <h3>Breads</h3>
 
+        <a href="Breads.html">Sourdough</a>
+        <a href="Breads.html">French</a>
+        <a href="Breads.html">Rolls</a>
+        <a href="Breads.html">Wheat</a>
+        <a href="Breads.html">Cinnamon Rolls</a>
+
+
+    </div> -->
+        <!-- 
     <div id="Dishes" class="tabcontent">
-        <!-- <h3>About</h3>
-        <p>Some stuff in about</p> -->
+        <a href="Dishes.html">Lasagna</a>
+        <p>
+
+
+        </p>
+        <a href="Dishes.html">Pizza</a>
+
+        <p>
+
+
+
+        </p>
+
+        <a href="Dishes.html">White Chicken Chili</a>
+
+
+ <div id="Condiments" class="tabcontent">
+         <h3>jam</h3>
+        <p>I am great I'm jam</p> -->
+        <!-- </div>
     </div>
 
     <div id="Desserts" class="tabcontent">
-        <!-- <h3>Skills</h3>
-        <p>This could be a list of skills</p> -->
+
+        <a href="Desserts.css">Brownies</a>
+
+        <p>
+
+
+
+        </p>
+
+        <a href="Desserts.css">Chocolate Chip Cookies</a>
+
+
+
+
     </div>
 
     <div id="Sides" class="tabcontent">
-        <!-- <h3>Resume</h3>
+         <h3>Resume</h3>
         <p>I am sides</p> -->
-    </div>
-
-    <div id="Condiments" class="tabcontent">
-        <!-- <h3>jam</h3>
-        <p>I am great I'm jam</p> -->
-    </div>
+        <!-- </div>  -->
 
 
 
@@ -92,53 +188,66 @@
 
 
 
-    <main>
+
+
+        <main>
 
 
 
-        <section>
-            Notes shoping list
-        </section>
-        <section>
-            tabs
-        </section>
-        <section>
-            notes shoping list
-        </section>
+            <section>
+                Notes shoping list
+            </section>
+            <section>
+                tabs
+            </section>
+            <section>
+                notes shoping list
+            </section>
 
 
-    </main>
+        </main>
 
-    <p> Ask me questions anytime:
-
-
-        <img src="https://www.shutterstock.com/image-vector/phone-rounded-icon-vector-illustration-260nw-566624752.jpg"
-            alt="phone pic" width="35">
-    </p>
-    <footer>
+        <p> Ask me questions anytime:
 
 
-        <h3>858-705-9675</h3>
-        <h3>ahlstrom@gmail.com</h3>
-        <h3><img src="Linda Linkedin.jpg" alt="linkedIn thumbprint" width="25">
-            <a href="https://www.linkedin.com/in/linda-ahlstrom"><span style="font-size: 15px">Connect with mom on
-                    LinkedIn</span></a>
+            <img src="https://www.shutterstock.com/image-vector/phone-rounded-icon-vector-illustration-260nw-566624752.jpg"
+                alt="phone pic" width="35">
+        </p>
+        <footer>
+
+            <div>
+
+                <p>Ask me questions anytime:</p>
+                <p><i class="fa-solid fa-paper-plane"></i><a href="mailto: ahlstroms@gmail.com">ahlstroms@gmail.com</a>
+                </p>
+                <p><i class="fa-solid fa-phone"></i></p><a href="tel: 858-705-9675">858-705-9675</a>
 
 
-            <!--                 
+
+            </div>
+
+
+            <h3>858-705-9675</h3>
+            <h3>ahlstrom@gmail.com</h3>
+            <h3><img src="Linda Linkedin.jpg" alt="linkedIn thumbprint" width="25">
+                <a href="https://www.linkedin.com/in/linda-ahlstrom"><span style="font-size: 15px">Connect with mom on
+                        LinkedIn</span></a>
+
+
+                <!--                 
             <a>@<span style="font-size: 20px">Connect with mom on
                 LinkedIn</span></a>. -->
 
 
-        </h3>
-    </footer>
+            </h3>
+        </footer>
 
 
 
-    <script src="index.js">
-        var elementId = "index"
+        <script src="index.js">
+            var elementId = "index"
 
-    </script>
+        </script>
 
 </body>
 
