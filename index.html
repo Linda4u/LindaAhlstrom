@@ -22,17 +22,12 @@
         <div>
 
 
+
+
+
             <!-- <div>
-
-                <h2><a class="tab-header" href="Pantry.html">Pantry</a></h2>
-
+                <h2 style="display: inline;"><a class="tab-sheader" href="Pantry.html">Pantry</a></h2>
             </div> -->
-
-
-
-            <div>
-                <h2><a class="tab-sheader" href="Pantry.html">Pantry</a></h2>
-            </div>
 
 
 
@@ -57,112 +52,7 @@
 
             </script>
 
-            <!-- adding a notebook -->
-            <div class="notepad">
-                <div class="notepad-header">
-                    <h2>Notepad</h2>
-                </div>
-                <div class="notepad-body" contenteditable="true" id="notepad-body-pantry">
-                    <!-- This div will contain the editable content -->
 
-                </div>
-                <!-- adding a copy text button with a notepad -->
-                <p>
-                    <button onclick="copyText()" class="copyTextButton">Copy text</button>
-                </p>
-
-                <script>
-                    document.getElementById('notepad-body').addEventListener('paste', function (event) {
-                        event.preventDefault();
-                        var text = (event.originalEvent || event).clipboardData.getData('text/plain');
-                        document.execCommand('insertText', false, text);
-                    });
-                </script>
-
-                <script>
-                    function copyText() {
-                        // Get the notepad body element
-                        var notepadBodyP = document.getElementById("notepad-body-pantry");
-
-                        // Get the text content of the notepad body
-                        var textToCopy = notepadBodyP.innerText;
-
-                        // Create a textarea element to hold the text temporarily
-                        var textarea = document.createElement("textarea");
-                        textarea.value = textToCopy;
-                        document.body.appendChild(textarea);
-
-                        // Select the text in the textarea
-                        textarea.select();
-                        textarea.setSelectionRange(0, 99999); // For mobile devices
-
-                        // Copy the text inside the textarea to the clipboard
-                        document.execCommand("copy");
-
-                        // Remove the temporary textarea
-                        document.body.removeChild(textarea);
-
-                    }
-                </script>
-
-
-                <!-- end of adding a copy text button with a notepad-->
-            </div>
-            <div>
-
-                <!-- adding a notebook -->
-                <div class="notepad">
-                    <div class="notepad-header">
-                        <h2>Notepad</h2>
-                    </div>
-                    <div class="notepad-body" contenteditable="true" id="notepad-body-shopping">
-
-                    </div>
-                    <p>
-                        <button onclick="copyText()" class="copyTextButton">Copy text</button>
-                    </p>
-
-
-                    <script>
-                        document.getElementById('notepad-body').addEventListener('paste', function (event) {
-                            event.preventDefault();
-                            var text = (event.originalEvent || event).clipboardData.getData('text/plain');
-                            document.execCommand('insertText', false, text);
-                        });
-                    </script>
-
-                    <script>
-                        function copyText() {
-                            // Get the notepad body element
-                            var notepadBodyS = document.getElementById("notepad-body-shopping");
-
-                            // Get the text content of the notepad body
-                            var textToCopy = notepadBodyS.innerText;
-
-                            // Create a textarea element to hold the text temporarily
-                            var textarea = document.createElement("textarea");
-                            textarea.value = textToCopy;
-                            document.body.appendChild(textarea);
-
-                            // Select the text in the textarea
-                            textarea.select();
-                            textarea.setSelectionRange(0, 99999); // For mobile devices
-
-                            // Copy the text inside the textarea to the clipboard
-                            document.execCommand("copy");
-
-                            // Remove the temporary textarea
-                            document.body.removeChild(textarea);
-
-                        }
-                    </script>
-
-
-                    <!-- end of adding a copy text button with a notepad-->
-
-
-                </div>
-            </div>
 
     </header>
 
@@ -173,7 +63,7 @@
     <img src="https://media.istockphoto.com/id/1550758299/photo/clean-black-induction-stove-with-control-panel-near-marble-countertop.jpg?s=2048x2048&w=is&k=20&c=B6S_uPXpLomSpUwwCxaiO3H_syI6yz34WVGZ4_xo0rk="
         alt="cooking picture" width="800" class="center">
 
-    <img src="Linda Linkedin.jpg" alt="my face" height="50">
+    <img src="Linda Linkedin.jpg" alt="my face" height="85" style="float: bottom-right;">
 
 
 
@@ -198,12 +88,12 @@
     <a href="Condiments.html" class="tablink">Condiments</a> -->
 
 
-    <button class="tablink" id="Breads">Breads</button>
+    <!-- <button class="tablink" id="Breads">Breads</button>
     <button class="tablink" id="Main Dishes">Main Dishes</button>
     <button class="tablink" id="Desserts">Desserts</button>
     <button class="tablink" id="Sides">Sides</button>
     <button class="tablink" id="Sides">Condiments</button>
-
+ -->
 
 
 
@@ -278,50 +168,489 @@
 
     <main>
 
+        <!-- adding a notebook -->
+        <div class="notepad">
+            <div class="notepad-header">
+                <h2>Notepad</h2>
+            </div>
+            <div class="notepad-body" contenteditable="true" id="notepad-body-pantry">
+                <!-- This div will contain the editable content -->
+
+            </div>
+            <!-- adding a copy text button with a notepad -->
+            <p>
+                <button onclick="copyText()" class="copyTextButton">Copy text</button>
+            </p>
+
+            <script>
+                document.getElementById('notepad-body').addEventListener('paste', function (event) {
+                    event.preventDefault();
+                    var text = (event.originalEvent || event).clipboardData.getData('text/plain');
+                    document.execCommand('insertText', false, text);
+                });
+            </script>
+
+            <script>
+                function copyText() {
+                    // Get the notepad body element
+                    var notepadBodyP = document.getElementById("notepad-body-pantry");
+
+                    // Get the text content of the notepad body
+                    var textToCopy = notepadBodyP.innerText;
+
+                    // Create a textarea element to hold the text temporarily
+                    var textarea = document.createElement("textarea");
+                    textarea.value = textToCopy;
+                    document.body.appendChild(textarea);
+
+                    // Select the text in the textarea
+                    textarea.select();
+                    textarea.setSelectionRange(0, 99999); // For mobile devices
+
+                    // Copy the text inside the textarea to the clipboard
+                    document.execCommand("copy");
+
+                    // Remove the temporary textarea
+                    document.body.removeChild(textarea);
+
+                }
+            </script>
+
+
+            <!-- end of adding a copy text button with a notepad-->
+        </div>
+
+
+
+        <div>
+
+            <!-- /* Style tab links */
+                <style></style>
+                .tablink {
+                    background-color: #555;
+                    color: white;
+                    float: left;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 14px 16px;
+                    font-size: 17px;
+                    width: 25%;
+                }
+            -->
+            <!-- <style>
+                .tablink:hover {
+                    background-color: #777;
+                }
+            </style> -->
+            <!-- .tablink:hover {
+            background-color: #777;
+            }
+
+            /* Style the tab content (and add height:100% for full page content) */
+            .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+            }
+
+            #Breads {
+            background-color: orange;
+            }
+
+            #Main Dishes {
+            background-color: green;
+            }
+
+            #Desserts {
+            background-color: blue;
+            }
+
+            #Sides {
+            background-color: orange;
+            } -->
 
 
 
 
 
+
+            <button class="tablink" id="Breads">Breads</button>
+            <button class="tablink" id="Main-Dishes">MainDishes__</button>
+            <button class="tablink" id="Desserts">Desserts</button>
+            <button class="tablink" id="Sides">Sides</button>
+            <button class="tablink" id="Condiments">Condiments__</button>
+
+
+            <!-- <div id="bread" class=tabcontent>
+                <h3>Breads</h3>
+                <p>roll and breads and stuff</p>
+            </div>
+            <div id="Dish">
+                <h3>Main Dishes</h3>
+                <p>pizza ect.</p>
+            </div>
+            <div id="Dessert">
+                <h3>Desserts</h3>
+                <p>Cookies,
+                    Cake,
+                    Candy</p>
+            </div>
+            <div id="Side">
+                <h3>Sides</h3>
+                <p>veggies etc.</p>
+            </div> -->
+
+
+            <script>var x = document.getElementById("Breads");
+                x.addEventListener("mouseover,openCity");
+                x.addEventListener("click", openPage);
+
+                var x = document.getElementById("Main-Dishes");
+                x.addEventListener("mouseover,openCity");
+                x.addEventListener("click", openPage);
+
+                var x = document.getElementById("Desserts");
+                x.addEventListener("mouseover,openCity");
+                x.addEventListener("click", openPage);
+
+                var x = document.getElementById("Sides");
+                x.addEventListener("mouseover,openCity");
+                x.addEventListener("click", openPage);
+
+                var x = document.getElementById("Condiments");
+                x.addEventListener("mouseover,openCity");
+                x.addEventListener("click", openPage);
+
+            </script>
+            <p id="demo"></p>
+            <script>var x = document.getElementById("Main-Dishes");
+                x.addEventListener("mouseover", myFunction);
+                x.addEventListener("click", mySecondFunction);
+                x.addEventListener("mouseout", myThirdFunction);
+
+                function myFunction() {
+                    // document.getElementById("demo").innerHTML += "Moused over!<br>";
+                    // document.getElementById("demo").style.textDecoration = "lightblue";
+                }
+
+                function mySecondFunction() {
+                    // document.getElementById("demo").innerHTML += "Clicked!<br>";
+                    window.open("Dishes.html");
+                    var i,
+                        tabcontent,
+                        tablinks;
+                    tablinks = document.getElementsByClassName("tablink");
+
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                        // window.location = elementId + '.html'
+                        // var mydiv = document.getElementById("myDiv");
+                        // window.location = myDiv + '.html'
+                        // window.open("https://www.w3schools.com");
+                        // var aTag = document.createElement('a');
+                        // aTag.setAttribute('href', "Dishes.html");
+                        // aTag.textContent = "link text";
+                        // mydiv.appendChild(aTag)
+
+                        //         document.getElementById("Bread").innerHTML += "got bread";
+                        //         document.getElementById("Dish").innerHTML += "got dish";
+                        //         document.getElementById("Dessert").innerHTML += "got dessert";
+                        //         document.getElementById("Side").innerHTML += "got side";
+
+                    }
+
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+
+
+
+
+
+                }
+
+
+
+
+
+
+            </script>
+
+            <script>var x = document.getElementById("Breads");
+                x.addEventListener("mouseover", myFunction);
+                x.addEventListener("click", mySecondFunction);
+                x.addEventListener("mouseout", myThirdFunction);
+
+                function myFunction() {
+                    // document.getElementById("demo").innerHTML += "Moused over!<br>";
+                    // document.getElementById("demo").style.textDecoration = "lightblue";
+                }
+
+                function mySecondFunction() {
+                    // document.getElementById("demo").innerHTML += "Clicked!<br>";
+                    window.open("Breads.html");
+                    var i,
+                        tabcontent,
+                        tablinks;
+                    tablinks = document.getElementsByClassName("tablink");
+
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                        // window.location = elementId + '.html'
+                        // var mydiv = document.getElementById("myDiv");
+                        // window.location = myDiv + '.html'
+                        // window.open("https://www.w3schools.com");
+                        // var aTag = document.createElement('a');
+                        // aTag.setAttribute('href', "Dishes.html");
+                        // aTag.textContent = "link text";
+                        // mydiv.appendChild(aTag)
+
+                        //         document.getElementById("Bread").innerHTML += "got bread";
+                        //         document.getElementById("Dish").innerHTML += "got dish";
+                        //         document.getElementById("Dessert").innerHTML += "got dessert";
+                        //         document.getElementById("Side").innerHTML += "got side";
+
+                    }
+
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+
+
+
+
+
+                }
+
+
+
+
+
+
+            </script>
+
+            <script>var x = document.getElementById("Desserts");
+                x.addEventListener("mouseover", myFunction);
+                x.addEventListener("click", mySecondFunction);
+                x.addEventListener("mouseout", myThirdFunction);
+
+                function myFunction() {
+                    // document.getElementById("demo").innerHTML += "Moused over!<br>";
+                    // document.getElementById("demo").style.textDecoration = "lightblue";
+                }
+
+                function mySecondFunction() {
+                    // document.getElementById("demo").innerHTML += "Clicked!<br>";
+                    window.open("Desserts.html");
+                    var i,
+                        tabcontent,
+                        tablinks;
+                    tablinks = document.getElementsByClassName("tablink");
+
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                        // window.location = elementId + '.html'
+                        // var mydiv = document.getElementById("myDiv");
+                        // window.location = myDiv + '.html'
+                        // window.open("https://www.w3schools.com");
+                        // var aTag = document.createElement('a');
+                        // aTag.setAttribute('href', "Dishes.html");
+                        // aTag.textContent = "link text";
+                        // mydiv.appendChild(aTag)
+
+                        //         document.getElementById("Bread").innerHTML += "got bread";
+                        //         document.getElementById("Dish").innerHTML += "got dish";
+                        //         document.getElementById("Dessert").innerHTML += "got dessert";
+                        //         document.getElementById("Side").innerHTML += "got side";
+
+                    }
+
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+
+
+
+
+
+                }
+
+
+
+
+
+
+            </script>
+
+            <script>var x = document.getElementById("Sides");
+                x.addEventListener("mouseover", myFunction);
+                x.addEventListener("click", mySecondFunction);
+                x.addEventListener("mouseout", myThirdFunction);
+
+                function myFunction() {
+                    // document.getElementById("demo").innerHTML += "Moused over!<br>";
+                    // document.getElementById("demo").style.textDecoration = "lightblue";
+                }
+
+                function mySecondFunction() {
+                    // document.getElementById("demo").innerHTML += "Clicked!<br>";
+                    window.open("Sides.html");
+                    var i,
+                        tabcontent,
+                        tablinks;
+                    tablinks = document.getElementsByClassName("tablink");
+
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                        // window.location = elementId + '.html'
+                        // var mydiv = document.getElementById("myDiv");
+                        // window.location = myDiv + '.html'
+                        // window.open("https://www.w3schools.com");
+                        // var aTag = document.createElement('a');
+                        // aTag.setAttribute('href', "Dishes.html");
+                        // aTag.textContent = "link text";
+                        // mydiv.appendChild(aTag)
+
+                        //         document.getElementById("Bread").innerHTML += "got bread";
+                        //         document.getElementById("Dish").innerHTML += "got dish";
+                        //         document.getElementById("Dessert").innerHTML += "got dessert";
+                        //         document.getElementById("Side").innerHTML += "got side";
+
+                    }
+
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+
+
+
+
+
+                }
+
+
+
+
+
+
+            </script>
+
+
+            <script>var x = document.getElementById("Condiments");
+                x.addEventListener("mouseover", myFunction);
+                x.addEventListener("click", mySecondFunction);
+                x.addEventListener("mouseout", myThirdFunction);
+
+                function myFunction() {
+                    // document.getElementById("demo").innerHTML += "Moused over!<br>";
+                    // document.getElementById("demo").style.textDecoration = "lightblue";
+                }
+
+                function mySecondFunction() {
+                    // document.getElementById("demo").innerHTML += "Clicked!<br>";
+                    window.open("Condiments.html");
+                    var i,
+                        tabcontent,
+                        tablinks;
+                    tablinks = document.getElementsByClassName("tablink");
+
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                        // window.location = elementId + '.html'
+                        // var mydiv = document.getElementById("myDiv");
+                        // window.location = myDiv + '.html'
+                        // window.open("https://www.w3schools.com");
+                        // var aTag = document.createElement('a');
+                        // aTag.setAttribute('href', "Dishes.html");
+                        // aTag.textContent = "link text";
+                        // mydiv.appendChild(aTag)
+
+                        //         document.getElementById("Bread").innerHTML += "got bread";
+                        //         document.getElementById("Dish").innerHTML += "got dish";
+                        //         document.getElementById("Dessert").innerHTML += "got dessert";
+                        //         document.getElementById("Side").innerHTML += "got side";
+
+                    }
+
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+
+
+
+
+
+                }
+
+
+
+
+
+
+            </script>
+
+
+
+
+        </div>
+        <div>
+            <!-- < !-- adding a notebook -->
+            <div class="notepad">
+                <div class="notepad-header">
+                    <h2>Notepad</h2>
+                </div>
+                <div class="notepad-body" contenteditable="true" id="notepad-body-shopping"></div>
+                <p><button onclick="copyText()" class="copyTextButton">Copy text</button></p>
+                <script>document.getElementById('notepad-body').addEventListener('paste', function (event) {
+                        event.preventDefault();
+                        var text = (event.originalEvent || event).clipboardData.getData('text/plain');
+                        document.execCommand('insertText', false, text);
+                    });
+
+                </script>
+                <script>function copyText() {
+                        // Get the notepad body element
+                        var notepadBodyS = document.getElementById("notepad-body-shopping");
+
+                        // Get the text content of the notepad body
+                        var textToCopy = notepadBodyS.innerText;
+
+                        // Create a textarea element to hold the text temporarily
+                        var textarea = document.createElement("textarea");
+                        textarea.value = textToCopy;
+                        document.body.appendChild(textarea);
+
+                        // Select the text in the textarea
+                        textarea.select();
+                        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+                        // Copy the text inside the textarea to the clipboard
+                        document.execCommand("copy");
+
+                        // Remove the temporary textarea
+                        document.body.removeChild(textarea);
+
+                    }
+
+                </script>
+                <!-- < !-- end of adding a copy text button with a notepad-->
+            </div>
+        </div>
     </main>
-
-
     <footer>
         <p>Ask me questions anytime:</p>
-
         <div>
             <p><i></i><a class="momfooter" href="mailto: ahlstroms@gmail.com">ahlstroms@gmail.com</a></p>
         </div>
-
         <div>
             <p><i></i></p><a class="momfooter" href="tel: 858-705-9675">858-705-9675</a>
         </div>
-
-
         <div>
-
-
-            <h3><img src="Linda Linkedin.jpg" alt="linkedIn thumbprint" width="25">
-                <a class="momfooter" href="https://www.linkedin.com/in/linda-ahlstrom"><span
-                        style="font-size: 15px">Connect
-                        with mom on
-                        LinkedIn</span></a>
-            </h3>
+            <h3><img src="Linda Linkedin.jpg" alt="linkedIn thumbprint" width="25"><a class="momfooter"
+                    href="https://www.linkedin.com/in/linda-ahlstrom"><span style="font-size: 15px">Connect with mom on
+                        LinkedIn</span></a></h3>
         </div>
-
-
-
     </footer>
-
-
-
-    <script src="index.js">
-        var elementId = "index"
+    <script src="index.js">var elementId = "index"
 
     </script>
-
 </body>
-
-<!--  go to site called coolors  -->
 
 </html>

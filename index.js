@@ -64,7 +64,7 @@ function openPage(elementId, page, color) {
   // tabname.innerHTML = "hi" + dispage + "!"
 
   // window.location = elementId + '.html'
-
+  // window.location = elementId + '.html'
 
 }
 

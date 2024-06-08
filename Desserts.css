@@ -3,9 +3,17 @@ body {
 
     background-image: url("https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZGVzc2VydHxlbnwwfHwwfHx8MA%3D%3D");
 
-    text-align: center;
+    text-align: none;
     text-size-adjust: page;
     font-size: xx-large;
 
+
+    .recipeText {
+
+        color: #FEFAE0;
+        font-weight: 400;
+        font-size: xx-large;
+        text-align: center;
+    }
 
 }
