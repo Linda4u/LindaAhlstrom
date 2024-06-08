@@ -169,3 +169,51 @@ h3 {
     background-color: #FAEDCD;
 
 }
+
+/*adding a notepad*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #151512;
+
+}
+
+.notepad {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #151512;
+    color: #D2CAAA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notepad-header {
+    border-bottom: 1px solid --main-text;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.notepad-header h2 {
+    margin: 0;
+}
+
+.notepad-body {
+    min-height: 300px;
+    border: 1px solid #D2CAAA;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #D2CAAA;
+    background-color: var(--primary-color);
+
+}
+
+.copyTextButton {
+    color: #151512;
+    background-color: #D2CAAA;
+    margin-left: 260px;
+
+    /* end of adding a notepad */
