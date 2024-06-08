@@ -9,7 +9,19 @@ head {
 
 }
 
+.tab-sheader:link {
+    color: #CCD5AE;
+}
 
+
+.tab-sheader:hover {
+
+    color: #CCD5AE;
+}
+
+.tab-sheader:visted {
+    color: #CCD5AE;
+}
 
 
 
@@ -130,6 +142,8 @@ h3 {
 
 }
 
+
+
 .tablink:hover {
     background-color: #FEFAE0;
     /* tabcontent.backgroundColor: #FEFAE0; */
@@ -182,7 +196,7 @@ body {
 .notepad {
     max-width: 600px;
     margin: 20px auto;
-    background-color: #151512;
+    background-color: #92AC86;
     color: #D2CAAA;
     padding: 20px;
     border-radius: 8px;
@@ -217,3 +231,9 @@ body {
     margin-left: 260px;
 
     /* end of adding a notepad */
+}
+
+.momfooter {
+
+    color: #FEFAE0;
+}

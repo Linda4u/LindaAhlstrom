@@ -21,20 +21,20 @@ var x = document.getElementById("Sides");
 x.addEventListener("mouseover,openCity");
 x.addEventListener("click", openPage);
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Get the notepad body element
-  var notepadBody = document.getElementById('notepad-body');
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Get the notepad body element
+//   var notepadBody = document.getElementById('notepad-body');
 
-  // Load saved notes from localStorage
-  if (localStorage.getItem('notes')) {
-    notepadBody.innerHTML = localStorage.getItem('notes');
-  }
+//   // Load saved notes from localStorage
+//   if (localStorage.getItem('notes')) {
+//     notepadBody.innerHTML = localStorage.getItem('notes');
+//   }
 
-  // Save notes to localStorage whenever content changes
-  notepadBody.addEventListener('input', function () {
-    localStorage.setItem('notes', this.innerHTML);
-  });
-});
+//   // Save notes to localStorage whenever content changes
+//   notepadBody.addEventListener('input', function () {
+//     localStorage.setItem('notes', this.innerHTML);
+//   });
+// });
 
 
 
@@ -63,7 +63,7 @@ function openPage(elementId, page, color) {
   // //if (tabname = "defaultOpen") { dispage = 'index'; } else { dispage = tabname; }
   // tabname.innerHTML = "hi" + dispage + "!"
 
-  window.location = elementId + '.html'
+  // window.location = elementId + '.html'
 
 
 }
